@@ -220,14 +220,21 @@ h2 {
   grid-template-columns: 1fr 1fr;
   width: 100%;
   column-gap: 30px;
-  justify-items: flex-start;
+  justify-items: start;
   padding: 10px 0;
 
+}
+
+#projects article a {
+  justify-self: flex-end;
 }
 
 #projects article img {
   border-radius: 40px;
   justify-self: end;
+  object-fit: cover;
+  width: 380px;
+  height: 280px;
 }
 
 /* Even articles */
@@ -237,10 +244,12 @@ h2 {
   text-align: end;
 }
 
-#projects article:nth-of-type(even) img {
+#projects article:nth-of-type(even) a {
   justify-self: start;
   order: 2;
 }
+
+
 
 
 #projects article h4 {
@@ -478,12 +487,19 @@ form input[type=submit]:not([disabled]):hover {
   #projectsContainer article {
     display: flex;
     flex-direction: column;
-    align-items: normal;
+    align-items: center;
     gap: 1em;
   }
 
   #projectsContainer article:nth-of-type(even) {
     flex-direction: column-reverse;
+  }
+
+  #projects article img {
+    object-fit: cover;
+    width: 80vw;
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   #arrowLeft,

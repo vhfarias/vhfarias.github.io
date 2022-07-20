@@ -41,7 +41,6 @@ let themeSelector = {
   isOn: false,
   current: 'dark',
   change: () => {
-    let themes = document.querySelectorAll('link[data-theme]');
     themeSelector.isOn = !themeSelector.isOn;
     themeSelector.element.setAttribute('data-on', themeSelector.isOn);
     document.querySelector('#theme').href = themeSelector.isOn ? './css/theme-light.css' : './css/theme-dark.css';
